@@ -17,3 +17,15 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'dennisvermeulen-devops'
+    subscriptionId: 'c3deb1e1-7a98-406d-832c-64df188877df'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'rg-dennisvermeulen-devops'
+    location: 'West Europe'
+    templateLocation: 'Linked artifact'
+    csmFile: 'https://github.com/DennisVermeulen/aks-pipeline-deployment/blob/main/azuredeploy.json'
+    deploymentMode: 'Complete'
