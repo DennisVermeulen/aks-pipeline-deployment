@@ -26,6 +26,5 @@ steps:
     resourceGroupName: 'rg-dennisvermeulen-devops'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/DennisVermeulen/aks-pipeline-deployment/main/aksdeploy.json?token=ACWUXSZZ6P6UOQHNW62KBJ3BT3D4K'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/DennisVermeulen/aks-pipeline-deployment/main/parameters.json?token=ACWUXS3O26KUCXG3TZFAJNLBT3EBY'
+    csmFileLink: 'https://raw.githubusercontent.com/DennisVermeulen/aks-pipeline-deployment/main/aksdeploy.json?token=ACWUXSY6XTTXOH6GCGB736TBT3HEE'
     deploymentMode: 'Complete'
