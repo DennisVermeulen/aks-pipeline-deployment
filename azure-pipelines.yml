@@ -22,7 +22,7 @@ steps:
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'dennisvermeulen-devops'
-    subscriptionId: 'c3deb1e1-7a98-406d-832c-64df188877df'
+    subscriptionId: $(SUBSCRIPTIONID)
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'rg-dennisvermeulen-devops'
     location: 'West Europe'
