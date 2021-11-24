@@ -13,12 +13,6 @@
       },
       "agentVMSize": {
         "value": "Standard_B2s"
-      },
-      "resourceTags": {
-        "value": {
-          "Environment": "Production",
-          "Project": "Tutorial"
-        }
       }
     }
   }
