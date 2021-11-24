@@ -2,14 +2,8 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-      "aksClusterName": {
-        "value": "akspipeline"
-      },
       "dnsPrefix": {
         "value": "aks-eus2-aksdays-demo-01"
-      },
-      "agentCount": {
-        "value": "1"
       },
       "agentVMSize": {
         "value": "Standard_B2s"
