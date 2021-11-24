@@ -8,9 +8,6 @@
       "dnsPrefix": {
         "value": "aks-eus2-aksdays-demo-01"
       },
-      "appServicePlanName": {
-        "value": "contosoplan"
-      },
       "agentCount": {
         "value": "1"
       },
