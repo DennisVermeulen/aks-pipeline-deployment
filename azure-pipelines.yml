@@ -25,6 +25,7 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'rg-dennisvermeulen-devops'
     location: 'West Europe'
-    templateLocation: 'Linked artifact'
+    templateLocation: 'URL of the file'
     csmFile: 'https://github.com/DennisVermeulen/aks-pipeline-deployment/blob/main/azuredeploy.json'
     deploymentMode: 'Complete'
+
