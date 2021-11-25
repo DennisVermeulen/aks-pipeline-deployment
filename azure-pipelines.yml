@@ -12,7 +12,7 @@ stages:
   - stage: Create AKS Cluster
     displayName: create virtual network
     jobs:
-    - job: create_virtual_network_vnet
+    - job: create_aks_cluster
       steps:
       - task: AzureCLI@2
         inputs:
@@ -31,3 +31,17 @@ stages:
                 aksClusterName="aks-eus2-aksdays-demo-01" \
                 agentVMSize="Standard_B2s"
 
+
+  - stage: Create AKS Cluster
+    displayName: create virtual network
+    jobs:
+    - job: create_aks_cluster
+      steps:
+      - task: AzureCLI@2
+        inputs:
+          azureSubscription: 'dennisvermeulen-devops'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            az aks get-credentials --resource-group rg-dennisvermeulen-devops --name aks-eus2-aksdays-demo-01
+            
