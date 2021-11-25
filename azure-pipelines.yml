@@ -13,8 +13,6 @@ stages:
     displayName: create virtual network vnet-$(myname)
     jobs:
     - job: create_virtual_network_vnet
-      pool:
-        vmImage: ubuntu-latest
       steps:
       - task: AzureCLI@2
         inputs:
