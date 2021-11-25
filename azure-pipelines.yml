@@ -32,6 +32,3 @@ stages:
                 agentCount="1" \
                 aksClusterName="aks-eus2-aksdays-demo-01" \
                 agentVMSize="Standard_B2s"
-
-
-aksClusterName=$AKS_NAME dnsPrefix=aks-eus2-aksdays-demo-01 \\n    agentCount=1 
