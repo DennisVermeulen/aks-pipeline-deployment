@@ -9,7 +9,7 @@ trigger:
 pool: cursus
 
 stages:
-  - stage: VNET
+  - stage: Create AKS Cluster
     displayName: create virtual network
     jobs:
     - job: create_virtual_network_vnet
