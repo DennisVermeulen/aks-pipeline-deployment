@@ -8,24 +8,30 @@ trigger:
 
 pool: cursus
 
-steps:
-#- script: echo Hello, world!
-#  displayName: 'Run a one-line script'
+stages:
+  - stage: VNET
+    displayName: create virtual network vnet-$(myname)
+    jobs:
+    - job: create_virtual_network_vnet
+      pool:
+        vmImage: ubuntu-latest
+      steps:
+      - task: AzureCLI@2
+        inputs:
+          azureSubscription: 'CINQ ICT (c3deb1e1-7a98-406d-832c-64df188877df)'
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            az group deployment create \
+              --mode Incremental \
+              --resource-group "rg-dennisvermeulen-devops" \
+              --subscription "c3deb1e1-7a98-406d-832c-64df188877df" \
+              --template-file "azuredeploy.json" \
+              --parameters \
+                dnsPrefix="aks-eus2-aksdays-demo-01" \
+                agentCount="1" \
+                aksClusterName="aks-eus2-aksdays-demo-01" \
+                agentVMSize="Standard_B2s"
 
-#- script: |
-#    echo Add other tasks to build, test, and deploy your project.
-#    echo See https://aka.ms/yaml
-#  displayName: 'Run a multi-line script'
 
-- task: AzureResourceManagerTemplateDeployment@3
-  inputs:
-    deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'dennisvermeulen-devops'
-    subscriptionId: 'c3deb1e1-7a98-406d-832c-64df188877df'
-    action: 'Create Or Update Resource Group'
-    resourceGroupName: 'rg-dennisvermeulen-devops'
-    location: 'West Europe'
-    templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/DennisVermeulen/aks-pipeline-deployment/main/aksdeploy.json?token=ACWUXSY6XTTXOH6GCGB736TBT3HEE'
-    csmParametersFileLink: 'https://raw.githubusercontent.com/DennisVermeulen/aks-pipeline-deployment/main/parameters.json?token=ACWUXS4LADXZSFWIKBWC2XTBT3HYM'
-    deploymentMode: 'Complete'
+aksClusterName=$AKS_NAME dnsPrefix=aks-eus2-aksdays-demo-01 \\n    agentCount=1 
