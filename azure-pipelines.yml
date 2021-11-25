@@ -16,7 +16,7 @@ stages:
       steps:
       - task: AzureCLI@2
         inputs:
-          azureSubscription: 'CINQ ICT (c3deb1e1-7a98-406d-832c-64df188877df)'
+          azureSubscription: 'dennisvermeulen-devops'
           scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
@@ -30,3 +30,4 @@ stages:
                 agentCount="1" \
                 aksClusterName="aks-eus2-aksdays-demo-01" \
                 agentVMSize="Standard_B2s"
+
