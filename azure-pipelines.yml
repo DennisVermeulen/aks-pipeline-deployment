@@ -9,8 +9,8 @@ trigger:
 pool: cursus
 
 stages:
-  - stage: Create AKS Cluster
-    displayName: create virtual network
+  - stage: Create_AKS_Cluster
+    displayName: create AKS cluster
     jobs:
     - job: create_aks_cluster
       steps:
