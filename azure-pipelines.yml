@@ -23,7 +23,7 @@ stages:
             az group deployment create \
               --mode Incremental \
               --resource-group "rg-dennisvermeulen-devops" \
-              --subscription "c3deb1e1-7a98-406d-832c-64df188877df" \
+              --subscription $(SUBSCRIPTION) \
               --template-file "azuredeploy.json" \
               --parameters \
                 dnsPrefix="aks-eus2-aksdays-demo-01" \
