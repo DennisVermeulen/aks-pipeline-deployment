@@ -26,8 +26,8 @@ stages:
               --subscription $(SUBSCRIPTION) \
               --template-file "azuredeploy.json" \
               --parameters \
-                dnsPrefix="aks-eus2-aksdays-demo-01" \
+                dnsPrefix="aks-dv-pipeline" \
                 agentCount="1" \
-                aksClusterName="aks-eus2-aksdays-demo-01" \
+                aksClusterName="aks-dv-pipeline" \
                 agentVMSize="Standard_B2s"
 
