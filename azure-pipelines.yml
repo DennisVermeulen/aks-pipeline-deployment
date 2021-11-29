@@ -16,7 +16,7 @@ stages:
       steps:
       - task: AzureCLI@2
         inputs:
-          azureSubscription: 'dennisvermeulen-devops'
+          azureSubscription: $(SUBSCRIPTION)
           scriptType: 'bash'
           scriptLocation: 'inlineScript'
           inlineScript: |
