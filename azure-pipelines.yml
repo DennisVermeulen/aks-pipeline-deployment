@@ -23,7 +23,7 @@ stages:
             az group deployment create \
               --mode Incremental \
               --resource-group "rg-dennisvermeulen-devops" \
-              --subscription $(SUBSCRIPTION) \
+              #--subscription $(SUBSCRIPTION) \
               --template-file "azuredeploy.json" \
               --parameters \
                 dnsPrefix="aks-dv-pipeline" \
